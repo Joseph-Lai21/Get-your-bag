@@ -1,0 +1,108 @@
+[gd_scene load_steps=10 format=3 uid="uid://dsn0ga4kav6f0"]
+
+[ext_resource type="Texture2D" uid="uid://dbv1ymss288qq" path="res://images/grass background.png" id="1_826rh"]
+[ext_resource type="Script" path="res://main.gd" id="1_cjcx3"]
+[ext_resource type="PackedScene" uid="uid://ch0wbr1ee42bg" path="res://player.tscn" id="1_hsaja"]
+[ext_resource type="Texture2D" uid="uid://wcppvb5w1bgb" path="res://images/money thing.png" id="3_677od"]
+[ext_resource type="Texture2D" uid="uid://butjmv0lc525h" path="res://images/plssss.png" id="3_ggoom"]
+[ext_resource type="PackedScene" uid="uid://b1a6ddca5quc7" path="res://scenes/enemy.tscn" id="5_6sw4t"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kgjt"]
+texture = ExtResource("3_677od")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ny7qn"]
+texture = ExtResource("3_ggoom")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_c0qmd"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_ny7qn")
+sources/0 = SubResource("TileSetAtlasSource_0kgjt")
+
+[node name="main" type="Node2D"]
+position = Vector2(1, -3)
+scale = Vector2(0.601515, 0.5663)
+script = ExtResource("1_cjcx3")
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_hsaja")]
+top_level = true
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-1.00786, -4)
+scale = Vector2(1.00424, 0.922999)
+collision_layer = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_right = 1931.0
+offset_bottom = 1168.0
+scale = Vector2(0.988217, 0.979741)
+texture = ExtResource("1_826rh")
+metadata/_edit_use_anchors_ = true
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(378.956, 445)
+tile_set = SubResource("TileSet_c0qmd")
+format = 2
+layer_0/tile_data = PackedInt32Array(-393222, 65538, 0, -327686, 65538, 0, -262150, 65538, 0, -196614, 65538, 0, -131078, 65538, 0, -65542, 65538, 0, -6, 65538, 0, 65530, 65538, 0, 131066, 65538, 0, 196602, 65538, 0, -458740, 65538, 0, -458741, 65538, 0, -458742, 65538, 0, -458743, 65538, 0, -458744, 65538, 0, -458745, 65538, 0, -458746, 65538, 0, -458747, 65538, 0, -458748, 65538, 0, -458749, 65538, 0, -458750, 65538, 0, -458751, 65538, 0, -458752, 65538, 0, -393217, 65538, 0, -393218, 65538, 0, -393219, 65538, 0, -393220, 65538, 0, -393221, 65538, 0, -458739, 65538, 0, -458738, 65538, 0, -458737, 65538, 0, -458736, 65538, 0, -458735, 65538, 0, -458734, 65538, 0, -458733, 65538, 0, -458732, 65538, 0, -458731, 65538, 0, -458730, 65538, 0, -458729, 65538, 0, 262138, 65538, 0, 327674, 65538, 0, 393210, 65538, 0, 458746, 65538, 0, -393193, 65538, 0, -327657, 65538, 0, -262121, 65538, 0, -196585, 65538, 0, -131049, 65538, 0, -65513, 65538, 0, 23, 65538, 0, 65559, 65538, 0, 131095, 65538, 0, 524282, 65538, 0, 589818, 65538, 0, 655354, 65538, 0, 720890, 65538, 0, 720891, 65538, 0, 720893, 65538, 0, 720894, 65538, 0, 720895, 65538, 0, 655360, 65538, 0, 655361, 65538, 0, 655362, 65538, 0, 655363, 65538, 0, 655364, 65538, 0, 655365, 65538, 0, 655366, 65538, 0, 655367, 65538, 0, 655368, 65538, 0, 655369, 65538, 0, 655370, 65538, 0, 655371, 65538, 0, 655372, 65538, 0, 655373, 65538, 0, 655374, 65538, 0, 655375, 65538, 0, 655376, 65538, 0, 655377, 65538, 0, 655378, 65538, 0, 655379, 65538, 0, 655380, 65538, 0, 655381, 65538, 0, 655382, 65538, 0, 655383, 65538, 0, 589847, 65538, 0, 524311, 65538, 0, 458775, 65538, 0, 393239, 65538, 0, 327703, 65538, 0, 262167, 65538, 0, 196631, 65538, 0, 720892, 65538, 0, 458749, 65538, 0, 458750, 65538, 0, 458751, 65538, 0, 393216, 65538, 0, 393217, 65538, 0, 393218, 65538, 0, 655359, 65538, 0, 393213, 65538, 0, 327677, 65538, 0, 262141, 65538, 0, 196608, 65538, 0, 262144, 65538, 0, 327680, 65538, 0, -65539, 65538, 0, -131075, 65538, 0, -196611, 65538, 0, 393221, 65538, 0, 393222, 65538, 0, 393223, 65538, 0, 524299, 65538, 0, 589835, 65538, 0, 262157, 65538, 0, 262158, 65538, 0, 262159, 65538, 0, 262160, 65538, 0, 262161, 65538, 0, 262162, 65538, 0, 327698, 65538, 0, 393234, 65538, 0, 458770, 65538, 0, 524309, 65538, 0, 589845, 65538, 0, 262165, 65538, 0, 262166, 65538, 0, -65515, 65538, 0, 21, 65538, 0, -196589, 65538, 0, -196590, 65538, 0, -196591, 65538, 0, -196592, 65538, 0, 16, 65538, 0, 65552, 65538, 0, 196617, 65538, 0, 196616, 65538, 0, 196615, 65538, 0, 196614, 65538, 0, 196613, 65538, 0, 65548, 65538, 0, 12, 65538, 0, -65524, 65538, 0, -131060, 65538, 0, -196596, 65538, 0, -262132, 65538, 0, 8, 65538, 0, 7, 65538, 0, 6, 65538, 0, 5, 65538, 0, 4, 65538, 0, 3, 65538, 0, 65534, 65538, 0, 65535, 65538, 0, -65535, 65538, 0, -65534, 65538, 0, -65533, 65538, 0, -65532, 65538, 0, -65531, 65538, 0, -65536, 65538, 0, -1, 65538, 0, -65537, 65538, 0, -131073, 65538, 0, -196609, 65538, 0)
+
+[node name="Enemy" parent="." instance=ExtResource("5_6sw4t")]
+position = Vector2(976.618, 363)
+scale = Vector2(-4.60416, 4.08)
+
+[node name="Enemy2" parent="." instance=ExtResource("5_6sw4t")]
+position = Vector2(638.984, 810)
+scale = Vector2(-4.60416, 4.08)
+
+[node name="Enemy7" parent="." instance=ExtResource("5_6sw4t")]
+position = Vector2(1030.03, 817)
+scale = Vector2(-4.60416, 4.08)
+
+[node name="Enemy5" parent="." instance=ExtResource("5_6sw4t")]
+position = Vector2(253.981, 1013)
+scale = Vector2(-4.60416, 4.08)
+
+[node name="Enemy6" parent="." instance=ExtResource("5_6sw4t")]
+position = Vector2(322.516, 182)
+scale = Vector2(-4.60416, 4.08)
+
+[node name="Enemy8" parent="." instance=ExtResource("5_6sw4t")]
+position = Vector2(523.08, 617)
+scale = Vector2(-4.60416, 4.08)
+
+[node name="Enemy9" parent="." instance=ExtResource("5_6sw4t")]
+position = Vector2(219.714, 613)
+scale = Vector2(-4.60416, 4.08)
+
+[node name="Enemy10" parent="." instance=ExtResource("5_6sw4t")]
+position = Vector2(772.022, 1034)
+scale = Vector2(-4.60416, 4.08)
+
+[node name="Enemy3" parent="." instance=ExtResource("5_6sw4t")]
+position = Vector2(1456.36, 1059)
+scale = Vector2(-4.60416, 4.08)
+
+[node name="Enemy4" parent="." instance=ExtResource("5_6sw4t")]
+position = Vector2(1710.34, 204)
+scale = Vector2(-4.60416, 4.08)
