@@ -1,29 +1,27 @@
-# Get Your Bag 🎮💰
+# Get Your Bag �
 
-**Get Your Bag** is a fast-paced 2D arcade game built with the **Godot Engine**.  
-Control your character to collect bouncing **money bags** 💰 while avoiding deadly **aliens** 👾.  
-Each second you survive increases the challenge—how long can you last?
+**Get Your Bag** is a fast-paced 2D flat game built with Godot
+Control your character to collect bouncing **money bags**  while avoiding  **aliens** .  
 
 ---
 
-## 🕹️ Gameplay Overview
+## Gameplay Overview
 - **Objective:** Collect money bags to increase your score.  
-- **Challenge:** Avoid aliens—one collision ends your run.  
+- **Challenge:** Avoid hitting aliens, which will end your run.  
 - **Goal:** Achieve the highest score possible before getting caught.
 
 ---
 
-## ✨ Features
+## Features
 - Smooth and responsive player movement  
 - Randomly bouncing collectible money bags  
-- Enemy AI that actively chases the player  
-- Functional main menu, win screen, and game-over screen  
+- Enemies that randomly move around
+- Functional main menu and game-over screen  
 - Score and high score tracking system  
-- Organized scene and script structure for scalability  
 
 ---
 
-## 🎮 Controls
+## Controls
 | Action | Key |
 |--------|-----|
 | Move | Arrow Keys / WASD |
@@ -31,8 +29,7 @@ Each second you survive increases the challenge—how long can you last?
 
 ---
 
-## 🚀 How to Run the Game
-### Option 1: Open with Godot (Recommended)
+## How to Run the Game
 1. Clone or download this repository:  
    ```bash
    git clone https://github.com/Joseph-Lai21/Get-your-bag.git
