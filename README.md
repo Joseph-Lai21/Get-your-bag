@@ -1,4 +1,4 @@
-# Get Your Bag �
+# Get Your Bag
 
 **Get Your Bag** is a fast-paced 2D flat game built with Godot
 Control your character to collect bouncing **money bags**  while avoiding  **aliens** .  
